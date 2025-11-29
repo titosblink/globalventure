@@ -1,0 +1,108 @@
+.main-logo a h1{
+    color: #0ba026;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.card-body{
+    overflow-x: auto;
+}
+
+.card-body::-webkit-scrollbar{
+    width: 0;
+}
+
+.mailform{
+     min-height: 40vh !important;
+}
+
+.mailform input{
+    margin: 10px 0;
+    background-color: #222222 !important;
+}
+
+.mailform select{
+    background-color: #222222;
+    width: 100%;
+    color: inherit;
+    padding: 10px 0;
+}
+
+.adminbtn{
+    width: 80%; margin-top:10px; 
+    background-color:#0ba026;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+
+.table_name {
+    width: 80%;
+    border: none;
+    outline: none;
+    text-align: inherit;
+    background-color: transparent;
+}
+
+
+#earningslog{
+    margin-top: 0;
+    padding-top:0
+}
+
+#passwordreset .form-container form{
+    width:60%;
+    margin: auto;
+}
+
+#tab_1_content .card .card-body #searchusers input{
+    width: 80vw;
+    margin-bottom: 10px;
+}
+  
+
+  @media (max-width:767px){
+    .navbar-nav .open .dropdown-menu>li>button, body.light .navbar-nav .open .dropdown-menu>li>button {
+        line-height: 30px;
+        text-align: center;
+        border-bottom: 0;
+      }
+
+      ul.navbar-nav > li:not(.search):hover, ul.navbar-nav > li.active, ul.navbar-nav > li.dropdown.open {
+        background:transparent;
+      }
+    
+  }
+
+
+  @media (max-width:669px){
+    #admin{
+       font-size: 12px;
+    }
+
+    #passwordreset{
+        width: 95%;
+        margin:auto;
+        box-sizing: border-box;
+    }
+
+    #passwordreset .info-form{
+        width: 95%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    #passwordreset .form-container form{
+        width:90%;
+        margin: auto;
+    }
+
+    #passwordreset .form-container form button{
+        width: 100%;
+    }
+    
+  }
+
+ 
