@@ -143,6 +143,6 @@
             <script src="js/main7d3c.js?v=1697183429"></script>
         </div>
 
-        <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "2siq1fd6dad8790528f63f1f527ff61bc21c0370d7f975c23fe1f76761a6945c97ed43d9d8d8fd29fbcbf3d07d86fb8b447c", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zohopublic.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+        <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "siq1fd6dad8790528f63f1f527ff61bc21c0370d7f975c23fe1f76761a6945c97ed43d9d8d8fd29fbcbf3d07d86fb8b447c", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zohopublic.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
      </body>
 </html>
