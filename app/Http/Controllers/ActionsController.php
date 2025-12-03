@@ -144,7 +144,7 @@ class ActionsController extends Controller
                     DB::table('users')->insert($RegisterUser);
                     return back()->with('uploadsuccess','User successfully Created');
             }      
-        }catch(\Exception $exception){
+        }catch(Exception $exception){
           return back()->with('uploaderror','Sorry! Something is wrong');
         }
       }
