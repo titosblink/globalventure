@@ -21,12 +21,11 @@ return [
     | Session Lifetime
     |--------------------------------------------------------------------------
     |
-    | Number of minutes the session can remain idle before it expires.
+    | Number of minutes a session can remain idle before it expires.
     |
     */
 
     'lifetime' => env('SESSION_LIFETIME', 120),
-
     'expire_on_close' => false,
 
     /*
@@ -34,7 +33,7 @@ return [
     | Session Encryption
     |--------------------------------------------------------------------------
     |
-    | Encrypt session data before storage.
+    | Encrypt all session data before storing.
     |
     */
 
@@ -45,7 +44,7 @@ return [
     | Session File Location
     |--------------------------------------------------------------------------
     |
-    | Only used if driver is "file".
+    | Only used when using "file" session driver.
     |
     */
 
@@ -56,40 +55,40 @@ return [
     | Session Database Connection
     |--------------------------------------------------------------------------
     |
-    | Database connection for "database" or "redis" drivers.
+    | The database connection to use for "database" sessions.
     |
     */
 
-    'connection' => env('SESSION_CONNECTION', null),
+    'connection' => env('SESSION_CONNECTION', env('DB_CONNECTION', 'mysql')),
 
     /*
     |--------------------------------------------------------------------------
     | Session Database Table
     |--------------------------------------------------------------------------
     |
-    | Table name used by the database driver.
+    | The table to store sessions when using "database" driver.
     |
     */
 
-    'table' => 'sessions',
+    'table' => env('SESSION_TABLE', 'sessions'),
 
     /*
     |--------------------------------------------------------------------------
     | Session Cache Store
     |--------------------------------------------------------------------------
     |
-    | Only for cache-driven session drivers (apc, memcached, redis).
+    | Only used for cache-driven session drivers.
     |
     */
 
-    'store' => env('SESSION_STORE', null),
+    'store' => env('SESSION_STORE'),
 
     /*
     |--------------------------------------------------------------------------
     | Session Sweeping Lottery
     |--------------------------------------------------------------------------
     |
-    | Chance of cleaning old sessions on a request.
+    | Chance to clean up old sessions on each request.
     |
     */
 
@@ -99,14 +98,11 @@ return [
     |--------------------------------------------------------------------------
     | Session Cookie Name
     |--------------------------------------------------------------------------
-    |
-    | Name of the session cookie.
-    |
     */
 
     'cookie' => env(
         'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
+        Str::slug(env('APP_NAME', 'laravel'), '_') . '_session'
     ),
 
     /*
@@ -150,6 +146,5 @@ return [
     |
     */
 
-    'same_site' => 'lax',
-
+    'same_site' => env('SESSION_SAME_SITE', 'lax'),
 ];
