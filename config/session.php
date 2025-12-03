@@ -8,23 +8,14 @@ return [
     |--------------------------------------------------------------------------
     | Default Session Driver
     |--------------------------------------------------------------------------
-    |
-    | Supported: "file", "cookie", "database", "apc",
-    |            "memcached", "redis", "dynamodb", "array"
-    |
     */
-
     'driver' => env('SESSION_DRIVER', 'database'),
 
     /*
     |--------------------------------------------------------------------------
     | Session Lifetime
     |--------------------------------------------------------------------------
-    |
-    | Number of minutes a session can remain idle before it expires.
-    |
     */
-
     'lifetime' => env('SESSION_LIFETIME', 120),
     'expire_on_close' => false,
 
@@ -32,66 +23,42 @@ return [
     |--------------------------------------------------------------------------
     | Session Encryption
     |--------------------------------------------------------------------------
-    |
-    | Encrypt all session data before storing.
-    |
     */
-
     'encrypt' => false,
 
     /*
     |--------------------------------------------------------------------------
-    | Session File Location
+    | Session File Location (for file driver)
     |--------------------------------------------------------------------------
-    |
-    | Only used when using "file" session driver.
-    |
     */
-
     'files' => storage_path('framework/sessions'),
 
     /*
     |--------------------------------------------------------------------------
     | Session Database Connection
     |--------------------------------------------------------------------------
-    |
-    | The database connection to use for "database" sessions.
-    |
     */
-
     'connection' => env('SESSION_CONNECTION', env('DB_CONNECTION', 'mysql')),
 
     /*
     |--------------------------------------------------------------------------
     | Session Database Table
     |--------------------------------------------------------------------------
-    |
-    | The table to store sessions when using "database" driver.
-    |
     */
-
     'table' => env('SESSION_TABLE', 'sessions'),
 
     /*
     |--------------------------------------------------------------------------
-    | Session Cache Store
+    | Session Cache Store (not used for database driver)
     |--------------------------------------------------------------------------
-    |
-    | Only used for cache-driven session drivers.
-    |
     */
-
-    'store' => env('SESSION_STORE'),
+    'store' => env('SESSION_STORE', null),
 
     /*
     |--------------------------------------------------------------------------
     | Session Sweeping Lottery
     |--------------------------------------------------------------------------
-    |
-    | Chance to clean up old sessions on each request.
-    |
     */
-
     'lottery' => [2, 100],
 
     /*
@@ -99,7 +66,6 @@ return [
     | Session Cookie Name
     |--------------------------------------------------------------------------
     */
-
     'cookie' => env(
         'SESSION_COOKIE',
         Str::slug(env('APP_NAME', 'laravel'), '_') . '_session'
@@ -110,7 +76,6 @@ return [
     | Session Cookie Path
     |--------------------------------------------------------------------------
     */
-
     'path' => '/',
 
     /*
@@ -118,7 +83,6 @@ return [
     | Session Cookie Domain
     |--------------------------------------------------------------------------
     */
-
     'domain' => env('SESSION_DOMAIN', null),
 
     /*
@@ -126,7 +90,6 @@ return [
     | HTTPS Only Cookies
     |--------------------------------------------------------------------------
     */
-
     'secure' => env('SESSION_SECURE_COOKIE', true),
 
     /*
@@ -134,17 +97,13 @@ return [
     | HTTP Access Only
     |--------------------------------------------------------------------------
     */
-
     'http_only' => true,
 
     /*
     |--------------------------------------------------------------------------
     | Same-Site Cookies
     |--------------------------------------------------------------------------
-    |
-    | Supported: "lax", "strict", "none", null
-    |
     */
-
     'same_site' => env('SESSION_SAME_SITE', 'lax'),
+
 ];
